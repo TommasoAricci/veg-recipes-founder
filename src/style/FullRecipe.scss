@@ -1,0 +1,205 @@
+.full-recipe {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding-top: 30px;
+
+    img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #f0d43a;
+        text-shadow: 1px 1px 3px black;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #3b4a6b;
+        text-shadow: 1px 1px 3px white;
+    }
+
+    p {
+        text-align: center;
+        font-size: 20px;
+        word-break: break-all;
+    }
+
+    .diet {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        span {
+            flex-wrap: wrap;
+            margin-right: 5px;
+            margin-left: 5px;
+            font-size: 14px;
+            padding: 6px;
+            border-radius: 5px;
+            background-color: #f0d43a;
+        }
+    }
+
+    .servings-text {
+        background-color: #22b2da;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 15px;
+        margin-top: -5px;
+    }
+
+    .index {
+        border-radius: 5px;
+        background: white;
+        padding: 30px;
+        font-size: 15px;
+        margin-top: 25px;
+
+        ol {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        border-radius: 5px;
+        background: white;
+        opacity: 0.8;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+        .button {
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: lightgreen;
+            font-family: "Happy Monkey", sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 10px;
+
+            &:hover {
+                color: #fff;
+            }
+            &:active {
+                background-color: rgb(98, 188, 98);
+                color: #000;
+            }
+    
+    }
+}
+
+.ingredients {
+    padding: 10px;
+    width: 80%;
+    background-color: #3b4a6b;
+    color: #f0d43a;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+.ingredient-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    font-size: 20px;
+    list-style: none;
+
+    .checking {
+        display: flex;
+    }
+
+    .unchecked {
+        text-decoration: line-through;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5); /* Supporto per Safari */
+        -moz-transform: scale(1.5); /* Supporto per Firefox */
+        -ms-transform: scale(1.5); /* Supporto per IE */
+        -o-transform: scale(1.5); /* Supporto per Opera */
+        margin: 10px; /* Per compensare l'aumento delle dimensioni */
+    }
+}
+
+.instructions {
+    width: 80%;
+    background-color: #f0d43a;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    ol {
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: justify;
+
+        li {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.up {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .spinner-icon {
+        font-size: 50px;
+        color: #f0d43a;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .full-recipe {
+        width: 70%;
+    }
+}
