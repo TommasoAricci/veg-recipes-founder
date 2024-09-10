@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useCallback } from "react";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,23 +13,25 @@ export default function Header() {
     function handleClick() {
         setIsOpen(!isOpen);
     }
-
-    function handleClose(event) {
-        if (
-            isOpen &&
-            !event.target.closest(".navbar-main") &&
-            !event.target.closest(".navbar-open")
-        ) {
-            setIsOpen(false);
-        }
-    }
+    const handleClose = useCallback(
+        (event) => {
+            if (
+                isOpen &&
+                !event.target.closest(".navbar-main") &&
+                !event.target.closest(".navbar-open")
+            ) {
+                setIsOpen(false);
+            }
+        },
+        [isOpen]
+    );
 
     useEffect(() => {
         document.addEventListener("click", handleClose);
         return () => {
             document.removeEventListener("click", handleClose);
         };
-    }, [isOpen]);
+    }, [handleClose]);
 
     console.log(isOpen);
 
