@@ -22,7 +22,7 @@ export default function About() {
                     </h1>
                     <h2>
                         The best recipes-founder suitable for vegetarians and
-                        vegans.
+                        vegans as well.
                     </h2>
                     <div className="divider about-divider"></div>
                     <div className="info-div">

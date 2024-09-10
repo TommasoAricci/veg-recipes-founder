@@ -2,28 +2,23 @@ import React from "react";
 import Header from "./Header";
 import RecipesList from "./RecipesList";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "../style/Random.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRandom } from "@fortawesome/free-solid-svg-icons";
 
 export default function Random() {
     const [random, setRandom] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
     const [showRandom, setShowRandom] = useState(false);
 
-    useEffect(() => {
-        if (random && showRandom) getRandom();
-    }, []);
-
     // API CALL
-    async function getRandom() {
+    const getRandom = useCallback(async () => {
         const response = await axios.get(
             "https://api.spoonacular.com/recipes/random",
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "x-api-key": "29e3e55c0f7e429198b68d55854e9f6e",
+                    "x-api-key": "a0872fa45d484844aa4080662132008f",
                 },
                 params: {
                     number: 1,
@@ -32,10 +27,14 @@ export default function Random() {
             }
         );
         setRandom(response.data);
-        setIsLoading(false);
         setShowRandom(true);
-        console.log(random);
-    }
+    }, []);
+
+    useEffect(() => {
+        if (showRandom) {
+            getRandom();
+        }
+    }, [showRandom, getRandom]);
 
     return (
         <>
@@ -44,12 +43,12 @@ export default function Random() {
                 <h2 className={showRandom ? "randomTitleNull" : "randomTitle"}>
                     Don't know what to choose?
                     <br />
-                    <span>Randomize it!</span>
+                    <span id="surpise"> Surprise yourself!</span>
                 </h2>
             </div>
 
             {showRandom && (
-                <div className="recipes-container">
+                <div className="recipes-container random-recipe-div">
                     <RecipesList random={random.recipes[0]} />
                 </div>
             )}
@@ -61,7 +60,11 @@ export default function Random() {
                         : "randomButtonBefore button"
                 }
             >
-                <FontAwesomeIcon icon={faRandom} />
+                {showRandom ? (
+                    <FontAwesomeIcon icon={faRandom} className="randomIcon" />
+                ) : (
+                    <span>Randomize it!</span>
+                )}
             </button>
         </>
     );

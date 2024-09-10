@@ -8,8 +8,14 @@ body {
     font-family: Happy Monkey, sans-serif;
     line-height: 1.5;
     letter-spacing: 0.5px;
-    background-image: url(../images/back2.jpg);
+    background-image: url(../images/back5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+    background-image: url(../images/back5.jpg);
+    }
 }

@@ -29,7 +29,7 @@ export default function FullRecipe() {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "x-api-key": "29e3e55c0f7e429198b68d55854e9f6e",
+                    "x-api-key": "a0872fa45d484844aa4080662132008f",
                 },
             }
         );
