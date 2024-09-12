@@ -38,41 +38,37 @@ export default function Header() {
     return (
         <div className="header">
             {/*menu-laptop*/}
-            <div className="menu-laptop">
-                <Link to="/">
-                    <button>About</button>
+            <ul className="menu-laptop">
+                <Link to="/" style={{ textDecoration: "none" }}>
+                    <li>About</li>
                 </Link>
-                <Link to="/recipes">
-                    <button>Find a recipe</button>
+                <Link to="/recipes" style={{ textDecoration: "none" }}>
+                    <li>Find a recipe</li>
                 </Link>
-                <Link to="/random">
-                    <button> Get a Random Recipe</button>
+                <Link to="/random" style={{ textDecoration: "none" }}>
+                    <li> Get a Random Recipe</li>
                 </Link>
-            </div>
+            </ul>
             {/*menu-laptop*/}
             <Link to="/">
                 <img src={image} className="logo" alt="" />
             </Link>
             <div className="navbar-main">
-                <button className="ham-button">
-                    <FontAwesomeIcon
-                        icon={faBars}
-                        className="ham"
-                        onClick={handleClick}
-                    />
+                <button className="ham-button" onClick={handleClick}>
+                    <FontAwesomeIcon icon={faBars} className="ham" />
                 </button>
             </div>
             <div className={isOpen ? "navbar-open" : "navbar-close"}>
                 <ul className="list">
-                    <li>
-                        <Link to="/">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/recipes">Find a recipe</Link>
-                    </li>
-                    <li>
-                        <Link to="/random">Get a Random Recipe</Link>
-                    </li>
+                    <Link to="/">
+                        <li>About</li>
+                    </Link>
+                    <Link to="/recipes">
+                        <li>Find a recipe</li>
+                    </Link>
+                    <Link to="/random">
+                        <li>Get a random recipe</li>
+                    </Link>
                 </ul>
                 <button
                     onClick={handleClick}

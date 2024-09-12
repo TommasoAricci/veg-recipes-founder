@@ -43,7 +43,7 @@ export default function Random() {
                 <h2 className={showRandom ? "randomTitleNull" : "randomTitle"}>
                     Don't know what to choose?
                     <br />
-                    <span id="surpise"> Surprise yourself!</span>
+                    <span id="surpise"> Randomize it!</span>
                 </h2>
             </div>
 
@@ -60,11 +60,7 @@ export default function Random() {
                         : "randomButtonBefore button"
                 }
             >
-                {showRandom ? (
-                    <FontAwesomeIcon icon={faRandom} className="randomIcon" />
-                ) : (
-                    <span>Randomize it!</span>
-                )}
+                <FontAwesomeIcon icon={faRandom} className="randomIcon" />
             </button>
         </>
     );

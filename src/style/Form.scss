@@ -19,6 +19,15 @@
         text-shadow: #000 1px 0 10px;
     }
 
+    h2 {
+        color: white;
+        font-size: 20px;
+        font-weight: 100;
+        margin-bottom: 10px;
+        text-align: center;
+        text-shadow: rgba(248, 248, 248, 0.182) 1px 0 5px;
+    }
+
     .form {
         display: flex;
         flex-direction: column;
@@ -79,14 +88,17 @@
         }
     }
 
-
     .form-title {
         display: none; // Sovrascrivi il titolo
+    }
+
+    h2{
+        display: none;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .search-bar .form-title{
+    .search-bar .form-title {
         font-size: 50px;
     }
 }

@@ -7,7 +7,7 @@ import { faTwitter} from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
   return (
-    <div className='footer-relative footer-navbar footer-absolute'>
+    <div className='footer-relative footer-navbar'>
         <p>© 2022 TheGreenWay. All rights reserved.</p>
         <div className='icons'>
             <button>

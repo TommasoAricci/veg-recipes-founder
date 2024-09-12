@@ -6,6 +6,11 @@ import "../style/FullRecipe.css";
 import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faCarrot } from "@fortawesome/free-solid-svg-icons";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
+import apetit from "../images/apetit.jpg";
 
 export default function FullRecipe() {
     // STATES AND EFFECTS //
@@ -42,7 +47,11 @@ export default function FullRecipe() {
     if (isLoading) {
         return (
             <div className="spinner">
-                <FontAwesomeIcon icon={faSpinner} className="spinner-icon"spin />
+                <FontAwesomeIcon
+                    icon={faSpinner}
+                    className="spinner-icon"
+                    spin
+                />
             </div>
         );
     }
@@ -68,7 +77,9 @@ export default function FullRecipe() {
                 <Header />
             </div>
             <a href="#header">
-                <button className="button up">⬆</button>
+                <button className="up">
+                    <FontAwesomeIcon icon={faArrowUp} />
+                </button>
             </a>
             <div className="full-recipe" id="full-recipe">
                 {/*
@@ -104,7 +115,13 @@ export default function FullRecipe() {
                         </li>
                     </ol>
                 </div>
-                <h2>About this recipe:</h2>
+                <h2>
+                    <FontAwesomeIcon
+                        icon={faCircleInfo}
+                        className="title-icon"
+                    />
+                    About this recipe
+                </h2>
                 <div className="summary" id="summary">
                     <p>
                         {fullSummary
@@ -116,7 +133,10 @@ export default function FullRecipe() {
                         {fullSummary ? "Read Less" : "Read More"}
                     </button>
                 </div>
-                <h2>Ingredients</h2>
+                <h2>
+                    <FontAwesomeIcon icon={faCarrot} className="title-icon" />
+                    Ingredients
+                </h2>
                 <div className="ingredients" id="ingredients">
                     <ul className="ingredient-list">
                         {info.extendedIngredients.map((ingredient, index) => (
@@ -139,7 +159,13 @@ export default function FullRecipe() {
                         ))}
                     </ul>
                 </div>
-                <h2>Instructions</h2>
+                <h2>
+                    <FontAwesomeIcon
+                        icon={faUtensils}
+                        className="title-icon"
+                    />
+                    Instructions
+                </h2>
                 <div className="instructions" id="instructions">
                     <ol>
                         {info.analyzedInstructions[0].steps.map((step) => (
@@ -147,6 +173,10 @@ export default function FullRecipe() {
                         ))}
                     </ol>
                 </div>
+
+                <img src={apetit} alt="" />
+
+                <h2>Enjoy it!</h2>
             </div>
         </>
     );

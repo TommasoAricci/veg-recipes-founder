@@ -68,18 +68,41 @@
         .list {
             display: flex;
             flex-direction: column;
-            align-items: left;
+            align-items: center;
             justify-content: center;
             list-style: none;
             padding: 0;
-            line-height: 3;
-            margin-top: 70px;
+            line-height: 2;
+            margin-top: 80px;
+
+            a{
+                text-decoration: none;
+                color: inherit;
+                width: 100%;
+            }
+
             li {
-                border-bottom: 1px solid black;
-                a {
-                    text-decoration: none;
-                    color: inherit;
-                    font-size: 20px;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                border: none;
+                background-color: #333;
+                color: white;
+                font-family: "Happy Monkey", sans-serif;
+                font-size: 15px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.1s;
+
+                &:hover {
+                    color: #000;
+                    background-color: #e0e0e0;
+                    transform: scale(1.1);
+                }
+                &:active {
+                    background-color: #e0e0e0;
+                    transform: scale(1);
                 }
             }
         }
@@ -125,7 +148,7 @@
         width: 100%;
         height: 100px;
 
-        button {
+        li {
             padding: 10px;
             margin: 10px;
             border-radius: 10px;
@@ -135,10 +158,13 @@
             font-family: "Happy Monkey", sans-serif;
             font-size: 15px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            text-decoration: none;
+            list-style: none;
 
             &:hover {
                 color: #000;
-                background-color: #fff;
+                background-color: #e0e0e0;
                 transform: scale(1.1);
             }
             &:active {

@@ -36,6 +36,12 @@
   color: #3b4a6b;
   text-shadow: 1px 1px 3px white;
 }
+.full-recipe h2 .title-icon {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #f0d43a;
+  text-shadow: 1px 1px 3px black;
+}
 .full-recipe p {
   text-align: center;
   font-size: 15px;
@@ -106,6 +112,13 @@
   background-color: rgb(98, 188, 98);
   color: #000;
 }
+.full-recipe .divider {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 80%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.2274509804);
+}
 
 .ingredients {
   padding: 10px;
@@ -163,8 +176,12 @@
   width: 50px;
   height: 50px;
   font-size: 20px;
-  border-radius: 5px;
+  border-radius: 50%;
   z-index: 999;
+  cursor: pointer;
+  border: none;
+  background-color: #f0d43a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .spinner {

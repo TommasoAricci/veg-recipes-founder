@@ -18,6 +18,14 @@
   color: #f0d43a;
   text-shadow: #000 1px 0 10px;
 }
+.search-bar h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: rgba(248, 248, 248, 0.182) 1px 0 5px;
+}
 .search-bar .form {
   display: flex;
   flex-direction: column;
@@ -72,6 +80,9 @@
   width: 220px;
 }
 .search-bar-top .form-title {
+  display: none;
+}
+.search-bar-top h2 {
   display: none;
 }
 

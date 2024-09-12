@@ -25,11 +25,13 @@ export default function Form() {
                 }
             >
                 <h1 className="form-title">Ready to get healthy ?</h1>
+                <h2>Type your favourite dish or food and find the best recipe for you</h2>
                 <form className="form" onSubmit={handleSubmit}>
                     <input
                         onChange={handleChange}
                         className="input"
                         type="text"
+                        autoFocus value={input}
                     />
                     <button className="button">
                         <FontAwesomeIcon

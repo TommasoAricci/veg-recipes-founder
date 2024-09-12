@@ -72,44 +72,44 @@ export default function About() {
                     </div>
 
                     <div className="divider about-divider"></div>
-                    <button className="about-button">
-                        <div className="info-div">
-                            <Link
-                                to="/recipes"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "inherit",
-                                }}
-                            >
+                    <Link
+                        to="/recipes"
+                        style={{
+                            textDecoration: "none",
+                            color: "inherit",
+                        }}
+                    >
+                        <button className="about-button">
+                            <div className="info-div">
                                 <FontAwesomeIcon
                                     icon={faCarrot}
                                     className="button-icon"
                                     size="2x"
                                 />{" "}
                                 <h2>Find a recipe by word</h2>
-                            </Link>
-                        </div>
-                    </button>
+                            </div>
+                        </button>
+                    </Link>
 
                     <div className="divider about-divider"></div>
-                    <button className="about-button">
-                        <div className="info-div">
-                            <FontAwesomeIcon
-                                icon={faShuffle}
-                                className="button-icon"
-                                size="2x"
-                            />{" "}
-                            <Link
-                                to="/random"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "inherit",
-                                }}
-                            >
+                    <Link
+                        to="/random"
+                        style={{
+                            textDecoration: "none",
+                            color: "inherit",
+                        }}
+                    >
+                        <button className="about-button">
+                            <div className="info-div">
+                                <FontAwesomeIcon
+                                    icon={faShuffle}
+                                    className="button-icon"
+                                    size="2x"
+                                />{" "}
                                 <h2>Find a random recipe</h2>
-                            </Link>{" "}
-                        </div>
-                    </button>
+                            </div>
+                        </button>
+                    </Link>
                     <div className="divider about-divider"></div>
                 </div>
             </div>
