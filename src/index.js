@@ -5,7 +5,6 @@ import App from "./components/App";
 import About from "./components/About";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FullRecipe from "./components/FullRecipe";
-import RecipesList from "./components/RecipesList";
 import Random from "./components/Random";
 
 const router = createBrowserRouter([
