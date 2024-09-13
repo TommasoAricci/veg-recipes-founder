@@ -15,7 +15,7 @@ On the "Get a recipe" page, you can fill out the form with the ingredient or dis
 
 Clicking the button will show a list of recipes.
 
-![App Screenshot](https://i.postimg.cc/s2BTK6ZJ/Screenshot-2024-09-13-173045.png)
+![App Screenshot](https://i.postimg.cc/x8nsnL6J/Screenshot-2024-09-13-174141.png)
 
 Clicking on a single recipe provides all its information.
 
