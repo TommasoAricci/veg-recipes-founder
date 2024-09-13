@@ -31,7 +31,6 @@ export default function Form() {
                         onChange={handleChange}
                         className="input"
                         type="text"
-                        autoFocus value={input}
                     />
                     <button className="button">
                         <FontAwesomeIcon
