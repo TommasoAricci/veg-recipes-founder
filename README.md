@@ -1,5 +1,5 @@
 
-[VISIT THE WEBPAGE]([https://tommasoaricci-bookfinder.netlify.app/](https://veg-recipes-founder.netlify.app/))
+[VISIT THE WEBPAGE](https://veg-recipes-founder.netlify.app/)
 
 ***
 
