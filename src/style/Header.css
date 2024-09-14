@@ -4,7 +4,6 @@
   height: 100px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: center;
   position: relative;
   background-color: rgba(255, 255, 255, 0.2588235294);
@@ -13,12 +12,18 @@
 .header .logo {
   width: 100px;
   display: block;
-  margin-right: 20px;
+  margin-left: 20px;
+}
+.header .logo-laptop {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 100px;
 }
 .header .ham-button {
   position: absolute;
   top: 32px;
-  left: 20px;
+  right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +53,7 @@
 .header .navbar-open {
   position: absolute;
   top: 0px;
-  left: 0px;
+  right: 0px;
   width: 50%;
   min-width: 300px;
   max-width: 400px;
@@ -124,13 +129,22 @@
   .header .navbar-main {
     display: none;
   }
+  .header .logo {
+    display: none;
+  }
   .header .menu-laptop {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
+  }
+  .header .menu-laptop ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    line-height: 2;
   }
   .header .menu-laptop li {
     padding: 10px;

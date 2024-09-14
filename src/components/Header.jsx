@@ -37,22 +37,27 @@ export default function Header() {
 
     return (
         <div className="header">
-            {/*menu-laptop*/}
-            <ul className="menu-laptop">
-                <Link to="/" style={{ textDecoration: "none" }}>
-                    <li>About</li>
-                </Link>
-                <Link to="/recipes" style={{ textDecoration: "none" }}>
-                    <li>Find a recipe</li>
-                </Link>
-                <Link to="/random" style={{ textDecoration: "none" }}>
-                    <li> Get a Random Recipe</li>
-                </Link>
-            </ul>
-            {/*menu-laptop*/}
             <Link to="/">
                 <img src={image} className="logo" alt="" />
             </Link>
+            {/*menu-laptop*/}
+            <div className="menu-laptop">
+            <Link to="/">
+                <img src={image} className="logo-laptop" alt="" />
+            </Link>
+                <ul>
+                    <Link to="/" style={{ textDecoration: "none" }}>
+                        <li>About</li>
+                    </Link>
+                    <Link to="/recipes" style={{ textDecoration: "none" }}>
+                        <li>Find a recipe</li>
+                    </Link>
+                    <Link to="/random" style={{ textDecoration: "none" }}>
+                        <li> Get a Random Recipe</li>
+                    </Link>
+                </ul>
+            </div>
+            {/*menu-laptop*/}
             <div className="navbar-main">
                 <button className="ham-button" onClick={handleClick}>
                     <FontAwesomeIcon icon={faBars} className="ham" />
