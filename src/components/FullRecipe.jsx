@@ -123,12 +123,14 @@ export default function FullRecipe() {
                     About this recipe
                 </h2>
                 <div className="summary" id="summary">
-                    <p>
-                        {fullSummary
-                            ? info.summary
-                            : info.summary.substring(0, 400)}
-                        ...
-                    </p>
+                    <p
+                        dangerouslySetInnerHTML={{
+                            __html: fullSummary
+                                ? info.summary
+                                : info.summary.substring(0, 400) + "...",
+                        }}
+                    />
+
                     <button className="button" onClick={toggleSummary}>
                         {fullSummary ? "Read Less" : "Read More"}
                     </button>
@@ -160,10 +162,7 @@ export default function FullRecipe() {
                     </ul>
                 </div>
                 <h2>
-                    <FontAwesomeIcon
-                        icon={faUtensils}
-                        className="title-icon"
-                    />
+                    <FontAwesomeIcon icon={faUtensils} className="title-icon" />
                     Instructions
                 </h2>
                 <div className="instructions" id="instructions">
