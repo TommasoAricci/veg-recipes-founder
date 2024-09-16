@@ -14,16 +14,18 @@ export default function App() {
     const [input, setInput] = useState("");
     const [query, setQuery] = useState("");
     const [isLoaded, setIsLoaded] = useState(false);
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
         async function getRecipe() {
             try {
                 const response = await axios.get(
-                    "https://api.spoonacular.com/recipes/complexSearch",
+                    apiUrl,
                     {
                         headers: {
                             "Content-Type": "application/json",
-                            "x-api-key": "a0872fa45d484844aa4080662132008f",
+                            "x-api-key": apiKey,
                         },
                         params: {
                             query: query,
@@ -32,10 +34,14 @@ export default function App() {
                         },
                     }
                 );
-    
+
                 setIsLoaded(true);
-    
-                if (query === "chicken" || query === "pork" || query === "beef") {
+
+                if (
+                    query === "chicken" ||
+                    query === "pork" ||
+                    query === "beef"
+                ) {
                     alert("Hey, I thought you were vegetarian!");
                     setIsLoaded(false);
                 }
@@ -44,9 +50,9 @@ export default function App() {
                 console.error("Errore nella richiesta:", error);
             }
         }
-    
+
         if (query) getRecipe();
-    }, [query]);
+    }, [query, apiKey, apiUrl]);
 
     // RENDER //
 

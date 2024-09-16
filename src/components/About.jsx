@@ -9,10 +9,14 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { faShuffle } from "@fortawesome/free-solid-svg-icons";
 import { faCarrot } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
     return (
         <>
+            <Helmet>
+                <title>About</title>
+            </Helmet>
             <Header />
             <div className="about">
                 <div className="about-div">

@@ -6,6 +6,7 @@ import About from "./components/About";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FullRecipe from "./components/FullRecipe";
 import Random from "./components/Random";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+    <HelmetProvider>
+        <React.StrictMode>
+            <RouterProvider router={router} />
+        </React.StrictMode>
+    </HelmetProvider>
 );

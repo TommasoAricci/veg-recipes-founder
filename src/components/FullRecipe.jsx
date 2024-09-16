@@ -21,6 +21,7 @@ export default function FullRecipe() {
     const [isLoading, setIsLoading] = useState(true);
     const [fullSummary, setFullSummary] = useState(false);
     const [isChecked, setIsChecked] = useState({});
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     useEffect(() => {
         if (id) getInfo(id);
@@ -34,7 +35,7 @@ export default function FullRecipe() {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "x-api-key": "a0872fa45d484844aa4080662132008f",
+                    "x-api-key": apiKey,
                 },
             }
         );

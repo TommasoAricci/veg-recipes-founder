@@ -6,19 +6,22 @@ import { useState, useEffect, useCallback } from "react";
 import "../style/Random.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRandom } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet-async";
 
 export default function Random() {
     const [random, setRandom] = useState({});
     const [showRandom, setShowRandom] = useState(false);
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiRandomUrl = process.env.REACT_APP_RANDOM_API_URL;
 
     // API CALL
     const getRandom = useCallback(async () => {
         const response = await axios.get(
-            "https://api.spoonacular.com/recipes/random",
+            apiRandomUrl,
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "x-api-key": "a0872fa45d484844aa4080662132008f",
+                    "x-api-key": apiKey,
                 },
                 params: {
                     number: 1,
@@ -28,7 +31,7 @@ export default function Random() {
         );
         setRandom(response.data);
         setShowRandom(true);
-    }, []);
+    }, [apiRandomUrl, apiKey]);
 
     useEffect(() => {
         if (showRandom) {
@@ -38,6 +41,9 @@ export default function Random() {
 
     return (
         <>
+            <Helmet>
+                <title>Get a Random Recipe</title>
+            </Helmet>
             <Header />
             <div className="randomTitleDiv">
                 <h2 className={showRandom ? "randomTitleNull" : "randomTitle"}>
