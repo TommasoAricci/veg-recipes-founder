@@ -3,7 +3,7 @@ import Header from "./Header";
 import RecipesList from "./RecipesList";
 import axios from "axios";
 import { useState, useEffect, useCallback } from "react";
-import "../style/Random.css";
+import "../style/Random.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRandom } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet-async";

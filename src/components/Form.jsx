@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { FormContext } from "../store/Context";
-import "../style/Form.css";
+import "../style/Form.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCarrot } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet-async";

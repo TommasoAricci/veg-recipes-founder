@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/Header.css";
+import "../style/Header.scss";
 import image from "../images/logonature.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";

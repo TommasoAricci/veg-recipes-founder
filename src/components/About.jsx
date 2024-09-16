@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import "../style/About.css";
+import "../style/About.scss";
 import image from "../images/logonature.png";
 import team from "../images/team-copia.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,7 @@ export default function About() {
     return (
         <>
             <Helmet>
-                <title>About</title>
+                <title>The Green Way - About</title>
             </Helmet>
             <Header />
             <div className="about">

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../style/FullRecipe.css";
+import "../style/FullRecipe.scss";
 import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -24,25 +24,28 @@ export default function FullRecipe() {
     const apiKey = process.env.REACT_APP_API_KEY;
 
     useEffect(() => {
-        if (id) getInfo(id);
-    }, [id]);
-
-    // API CALL //
-
-    async function getInfo(id) {
-        const response = await axios.get(
-            `https://api.spoonacular.com/recipes/${id}/information`,
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    "x-api-key": apiKey,
-                },
+        async function getInfo(id) {
+            try {
+                const response = await axios.get(
+                    `https://api.spoonacular.com/recipes/${id}/information`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            "x-api-key": apiKey,
+                        },
+                    }
+                );
+                setInfo(response.data);
+                setIsLoading(false);
+            } catch (error) {
+                console.error("Error fetching recipe:", error);
+                setIsLoading(false);
             }
-        );
-        setInfo(response.data);
-        setIsLoading(false);
-    }
+        }
 
+        if (id) getInfo(id);
+    }, [id, apiKey]);
+    
     console.log(info);
 
     if (isLoading) {
