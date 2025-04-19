@@ -1,4 +1,5 @@
 .about {
+    margin-top: 80px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -43,9 +44,10 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        background: linear-gradient(120deg, #e0e5c6b8, #a2b59fd9);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.05); /* effetto vetro soft */
+        backdrop-filter: blur(5px); /* effetto vetro satinato */
+        border-radius: 10px;
     }
 
     .info-div {

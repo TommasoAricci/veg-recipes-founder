@@ -1,4 +1,19 @@
-.randomTitleDiv {
+.random-div {
+  width: 80%;
+  height: 70%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.05); /* effetto vetro soft */
+  backdrop-filter: blur(5px); /* effetto vetro satinato */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  .randomTitleDiv {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -9,27 +24,27 @@
     width: 100%;
 
     .randomTitle {
-        font-size: 35px;
-        margin-bottom: 10px;
-        text-align: center;
-        margin: 0 0 10px;
-        padding: 10px;
-        color: #fff;
-        text-shadow: #000 1px 0 10px;
+      font-size: 35px;
+      margin-bottom: 10px;
+      text-align: center;
+      margin: 0 0 10px;
+      padding: 10px;
+      color: #fff;
+      text-shadow: #000 1px 0 10px;
 
-        #surpise {
-            color: #f0d43a;
-            text-shadow: #000 1px 0 10px;
-        }
+      #surpise {
+        color: #f0d43a;
+        text-shadow: #000 1px 0 10px;
+      }
     }
 
     .randomTitleNull {
-        display: none;
+      display: none;
     }
-}
+  }
 
-.randomButtonBefore {
-    margin-top: 20px;
+  .randomButtonBefore {
+    margin-top: 40px;
     font-family: "Cinzel", sans-serif;
     position: absolute;
     left: 50%;
@@ -47,25 +62,25 @@
     cursor: pointer;
 
     span {
-        font-family: "Happy Monkey", sans-serif;
-        font-size: 15px;
-        font-weight: 800;
+      font-family: "Happy Monkey", sans-serif;
+      font-size: 15px;
+      font-weight: 800;
     }
 
     &:hover {
-        color: #fff;
+      color: #fff;
     }
     &:active {
-        background-color: rgb(98, 188, 98);
-        color: #000;
+      background-color: rgb(98, 188, 98);
+      color: #000;
     }
     .randomIcon {
-        height: 60px;
+      height: 60px;
     }
-}
+  }
 
-.randomButtonThen {
-    margin-top: 20px;
+  .randomButtonThen {
+
     font-family: "Sue Ellen Francisco", sans-serif;
     position: relative;
     left: 50%;
@@ -81,18 +96,19 @@
     cursor: pointer;
 
     &:hover {
-        color: #fff;
+      color: #fff;
     }
     &:active {
-        background-color: rgb(98, 188, 98);
-        color: #000;
+      background-color: rgb(98, 188, 98);
+      color: #000;
     }
 
     .randomIcon {
-        height: 35px;
+      height: 35px;
     }
-}
+  }
 
-.random-recipe-div {
+  .random-recipe-div {
     margin-top: 40px;
+  }
 }

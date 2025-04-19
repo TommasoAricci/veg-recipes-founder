@@ -1,21 +1,21 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Happy Monkey, sans-serif;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-    background-image: url(../images/back5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  font-family: Happy Monkey, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  background-image: url(../images/back5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @media only screen and (min-width: 768px) {
-    body {
+  body {
     background-image: url(../images/back5.jpg);
-    }
+  }
 }

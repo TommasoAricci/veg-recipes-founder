@@ -53,7 +53,7 @@ export default function Header() {
                         <li>Find a recipe</li>
                     </Link>
                     <Link to="/random" style={{ textDecoration: "none" }}>
-                        <li> Get a Random Recipe</li>
+                        <li>Random Recipe</li>
                     </Link>
                 </ul>
             </div>
@@ -72,7 +72,7 @@ export default function Header() {
                         <li>Find a recipe</li>
                     </Link>
                     <Link to="/random">
-                        <li>Get a random recipe</li>
+                        <li>Random recipe</li>
                     </Link>
                 </ul>
                 <button

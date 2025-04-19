@@ -1,103 +1,109 @@
 .search-bar {
-    margin-top: 40px;
+  width: 80%;
+  height: 70%;
+  margin-top: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 10px;
+
+  .form-title {
+    font-size: 40px;
+    text-align: center;
+    color: #f0d43a;
+    text-shadow: #000 1px 0 10px;
+  }
+
+  h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: rgba(248, 248, 248, 0.182) 1px 0 5px;
+  }
+
+  .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    gap: 10px;
 
-    .form-title {
-        font-size: 40px;
-        margin-bottom: 10px;
-        padding: 10px;
-        text-align: center;
-        color: #f0d43a;
-        text-shadow: #000 1px 0 10px;
+    .input {
+      width: 300px;
+      height: 50px;
+      border: none;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      font-family: "Happy Monkey", sans-serif;
+      font-size: 25px;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+      }
     }
+    .button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      background-color: lightgreen;
+      font-family: "Happy Monkey", sans-serif;
+      font-size: 20px;
+      cursor: pointer;
 
-    h2 {
-        color: white;
-        font-size: 20px;
-        font-weight: 100;
-        margin-bottom: 10px;
-        text-align: center;
-        text-shadow: rgba(248, 248, 248, 0.182) 1px 0 5px;
+      &:hover {
+        color: #fff;
+      }
+      &:active {
+        background-color: rgb(98, 188, 98);
+        color: #000;
+      }
     }
-
-    .form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-        .input {
-            width: 300px;
-            height: 50px;
-            border: none;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            font-family: "Happy Monkey", sans-serif;
-            font-size: 25px;
-            text-align: center;
-
-            &:focus {
-                outline: none;
-            }
-        }
-        .button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: none;
-            background-color: lightgreen;
-            font-family: "Happy Monkey", sans-serif;
-            font-size: 20px;
-            cursor: pointer;
-
-            &:hover {
-                color: #fff;
-            }
-            &:active {
-                background-color: rgb(98, 188, 98);
-                color: #000;
-            }
-        }
-    }
+  }
 }
 
 .search-bar-top {
-    position: relative;
+  position: relative;
 
-    .form {
-        margin-top: 20px;
-        flex-direction: row;
+  .form {
+    margin-top: 20px;
+    flex-direction: row;
 
-        .button {
-            margin-left: 10px;
-        }
-
-        .input {
-            width: 220px;
-        }
+    .button {
+      margin-left: 10px;
     }
 
-    .form-title {
-        display: none; // Sovrascrivi il titolo
+    .input {
+      width: 220px;
     }
+  }
 
-    h2{
-        display: none;
-    }
+  .form-title {
+    display: none; // Sovrascrivi il titolo
+  }
+
+  h2 {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .search-bar .form-title {
-        font-size: 50px;
-    }
+  .search-bar .form-title {
+    font-size: 50px;
+  }
 }

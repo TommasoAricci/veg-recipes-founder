@@ -7,47 +7,47 @@ import { faCarrot } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet-async";
 
 export default function Form() {
-    const { input, setInput, setQuery, isLoaded } = useContext(FormContext);
+  const { input, setInput, setQuery, isLoaded } = useContext(FormContext);
 
-    function handleChange(event) {
-        setInput(event.target.value);
-    }
+  function handleChange(event) {
+    setInput(event.target.value);
+  }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        setQuery(input);
-        setInput("");
-    }
+  function handleSubmit(event) {
+    event.preventDefault();
+    setQuery(input);
+    setInput("");
+  }
 
-    return (
-        <>
-            <Helmet>
-                <title>Find a recipe</title>
-            </Helmet>
-            <div
-                className={
-                    isLoaded ? "search-bar search-bar-top" : "search-bar"
-                }
-            >
-                <h1 className="form-title">Ready to get healthy ?</h1>
-                <h2>
-                    Type your favourite dish or food and find the best recipe
-                    for you
-                </h2>
-                <form className="form" onSubmit={handleSubmit}>
-                    <input
-                        onChange={handleChange}
-                        className="input"
-                        type="text"
-                    />
-                    <button className="button">
-                        <FontAwesomeIcon
-                            icon={faCarrot}
-                            className="carrot-icon"
-                        />
-                    </button>
-                </form>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <Helmet>
+        <title>Find a recipe</title>
+      </Helmet>
+      <div
+        style={
+          isLoaded
+            ? {
+                marginTop: "160px",
+                backgroundColor: "transparent",
+                backdropFilter: "none",
+                border: "none",
+              }
+            : {}
+        }
+        className={isLoaded ? "search-bar search-bar-top" : "search-bar"}
+      >
+        <h1 className="form-title">Ready to get healthy ?</h1>
+        <h2>
+          Type your favourite dish or food and find the best recipe for you
+        </h2>
+        <form className="form" onSubmit={handleSubmit}>
+          <input onChange={handleChange} className="input" type="text" />
+          <button className="button">
+            <FontAwesomeIcon icon={faCarrot} className="carrot-icon" />
+          </button>
+        </form>
+      </div>
+    </>
+  );
 }

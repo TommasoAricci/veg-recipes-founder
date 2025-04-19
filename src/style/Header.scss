@@ -1,192 +1,206 @@
 .header {
-    width: 100%;
-    height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 999;
+  background-color: black;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px); /* effetto vetro satinato */
+
+  .logo {
+    width: 80px;
+    display: block;
+    margin-left: 20px;
+  }
+
+  .logo-laptop {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 80px;
+  }
+
+  .ham-button {
+    position: absolute;
+    top: 24px;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    background-color: #7ed957;
+    width: 35px;
+    height: 35px;
+
+    .ham {
+      height: 18px;
+      color: white;
+    }
+
+    &:hover {
+      background-color: #f0f0f0; /* Cambia il colore di sfondo al passaggio del mouse */
+
+      .ham {
+        color: #333;
+      }
+    }
+
+    &:active {
+      background-color: #e0e0e0; /* Colore di sfondo quando il bottone è premuto */
+    }
+  }
+
+  .navbar-open {
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 50%;
+    min-width: 300px;
+    max-width: 300px;
+    height: 30vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: #ffffff42;
-    box-shadow: 0px 0px 10px black;
+    background-color: #7ed957;
+    z-index: 999;
+    border-radius: 10px;
 
-    .logo {
-        width: 100px;
-        display: block;
-        margin-left: 20px;
-    }
+    .list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 0;
+      line-height: 2;
 
-    .logo-laptop {
-        position: absolute;
-        top:0;
-        left: 20px;
-        width: 100px;
-    }
-    .ham-button {
-        position: absolute;
-        top: 32px;
-        right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20%;
-        border: none;
+      a {
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+      }
+
+      li {
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+        color: #111;
+        background-color: transparent;
+        font-family: "Happy Monkey", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        border-radius: 8px;
         cursor: pointer;
-        background-color: #333;
-        width: 35px;
-        height: 35px;
-        transition: background-color 0.3s, transform 0.1s; /* Aggiungi una transizione fluida per gli effetti */
-
-        .ham {
-            height: 18px;
-            color: white;
-        }
+        transition: all 0.3s ease;
 
         &:hover {
-            background-color: #f0f0f0; /* Cambia il colore di sfondo al passaggio del mouse */
-            transform: scale(1.1); /* Ingrandisce leggermente il bottone */
-
-            .ham {
-                color: #333;
-            }
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
         }
 
         &:active {
-            background-color: #e0e0e0; /* Colore di sfondo quando il bottone è premuto */
-            transform: scale(1); /* Ripristina la dimensione originale */
+          transform: translateY(0);
+          box-shadow: none;
         }
+      }
     }
 
-    .navbar-open {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        width: 50%;
-        min-width: 300px;
-        max-width: 400px;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        background-color: #fffffff0;
-        z-index: 999;
+    .closing-button {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background-color: #ffffff00;
 
-        .list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            line-height: 2;
-            margin-top: 80px;
-
-            a {
-                text-decoration: none;
-                color: inherit;
-                width: 100%;
-            }
-
-            li {
-                width: 100%;
-                text-align: center;
-                padding: 10px;
-                margin: 10px;
-                border-radius: 10px;
-                border: none;
-                background-color: #333;
-                color: white;
-                font-family: "Happy Monkey", sans-serif;
-                font-size: 15px;
-                cursor: pointer;
-                transition: background-color 0.3s, transform 0.1s;
-
-                &:hover {
-                    color: #000;
-                    background-color: #e0e0e0;
-                    transform: scale(1.1);
-                }
-                &:active {
-                    background-color: #e0e0e0;
-                    transform: scale(1);
-                }
-            }
-        }
-
-        .closing-button {
-            position: absolute;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            background-color: #ffffff00;
-
-            .close {
-                height: 35px;
-            }
-        }
+      .close {
+        height: 18px;
+      }
     }
+  }
 
-    .navbar-close {
-        display: none;
-    }
+  .navbar-close {
+    display: none;
+  }
 
-    .menu-laptop {
-        display: none;
-    }
+  .menu-laptop {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .header .navbar-main {
-        display: none;
+  .header .navbar-main {
+    display: none;
+  }
+
+  .header .logo {
+    display: none;
+  }
+
+  .header .menu-laptop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    z-index: 999;
+
+    ul {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .header .logo {
-        display: none;
+    li {
+      width: 150px;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      background-color: transparent;
+      font-family: "Happy Monkey", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .header .menu-laptop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            line-height: 2;
-        }
-
-        li {
-            padding: 10px;
-            margin: 10px;
-            border-radius: 10px;
-            border: none;
-            background-color: #333;
-            color: white;
-            font-family: "Happy Monkey", sans-serif;
-            font-size: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-decoration: none;
-            list-style: none;
-
-            &:hover {
-                color: #000;
-                background-color: #e0e0e0;
-                transform: scale(1.1);
-            }
-            &:active {
-                background-color: #e0e0e0;
-                transform: scale(1);
-            }
-        }
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
     }
+
+    li:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
 }
